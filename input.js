@@ -1,24 +1,25 @@
 let connection;
+let {W,A,S,D} = require("./constants");
 
 const handleUserInput = function(data) {
   if (data === '\u0003') {
     process.exit();
   }
   if (data === "w") {
-    console.log("Move: up");
-    connection.write("Move: up");
+    console.log(W);
+    connection.write(W);
   }
   if (data === "d") {
-    console.log("Move: right");
-    connection.write("Move: right");
+    console.log(D);
+    connection.write(D);
   }
   if (data === "s") {
-    console.log("Move: down");
-    connection.write("Move: down");
+    console.log(S);
+    connection.write(S);
   }
   if (data === "a") {
-    console.log("Move: left");
-    connection.write("Move: left");
+    console.log(A);
+    connection.write(A);
   }
   if (data === "q") {
     connection.write("Say: I love spam!");
